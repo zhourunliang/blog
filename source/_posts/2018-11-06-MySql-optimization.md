@@ -12,9 +12,17 @@ tags: MySql
 - MyISAM ：性能优先  （表锁）
 ## SQL优化
 - 编写过程：
+        ```sql
 			select dinstinct  ..from  ..join ..on ..where ..group by ...having ..order by ..limit ..
-- 解析过程：			
+            ```
+
+
+- 解析过程：
+		```sql
 			from .. on.. join ..where ..group by ....having ...select dinstinct ..order by limit ...
+        ```
+
+
 ## 索引分类
 - 主键索引  ：  不能重复。id    不能是null
 - 唯一索引  ：不能重复。id    可以是null
@@ -28,6 +36,7 @@ tags: MySql
     | id | select_type | table | type | possible_keys | key | key_len | ref | rows | Extra |
     | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
     | 编号 | 查询类型 | 表 | 类型 | 预测用到的索引 | 实际使用的索引 | 实际使用索引的长度 | 表之间的引用 | 通过索引查询到的数据量 | 额外的信息 |
+    
 - 例子数据
     ```sql
     create table course
