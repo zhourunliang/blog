@@ -180,3 +180,31 @@ tags: MySql
 
     - using filesort ： 性能消耗大；需要“额外”的一次排序（查询）  。常见于 order by 语句中
 
+## MySql最大连接数
+mysql的最大连接数默认是100, 最大可以达到16384，可以通过max_connections设置
+
+## 对MySQL语句性能优化的16条经验
+- 为查询缓存优化查询
+- EXPLAIN 我们的SELECT查询(可以查看执行的行数)
+- 当只要一行数据时使用LIMIT 1
+- 为搜索字段建立索引
+- 在Join表的时候使用相当类型的列，并将其索引
+- 千万不要 ORDER BY RAND  ()
+- 避免SELECT *
+- 永远为每张表设置一个ID
+- 可以使用ENUM 而不要VARCHAR
+- 尽可能的使用NOT NULL
+- 固定长度的表会更快
+- 垂直分割
+- 拆分打的DELETE或INSERT语句
+- 越小的列会越快
+- 选择正确的存储引擎
+- 小心 "永久链接"
+
+## MyISAM和InnoDB比较
+![myisam_and_innodb](/assets/img/blog/myisam_and_innodb.png)
+
+
+
+
+
