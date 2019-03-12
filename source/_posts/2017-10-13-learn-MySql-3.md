@@ -213,3 +213,7 @@ ORDER BY code DESC
 
  ```
 
+## thinkphp的Model数据库配置
+```php
+protected $connection = 'mysql://username:password@host:port/db';
+```
