@@ -20,7 +20,7 @@ tags: python
 ## 原理:  
  1. 通过aid下载bilibili番剧弹幕
  2. 通过aid获取cid，如: http://www.bilibili.com/widget/getPageList?aid=9654289
- 3. 下载弹幕地址：http://comment.bilibili.tv/cid.xml
+ 3. 下载弹幕地址：http://comment.bilibili.com/cid.xml
 
 ---  
 
@@ -134,7 +134,7 @@ def downloadDanmu(cidItem):
     cid=cidItem['cid']
     animeName=cidItem['animeName']
     pagename=cidItem['pagename']
-    comment_url="http://comment.bilibili.tv/%s.xml" %cid
+    comment_url="http://comment.bilibili.com/%s.xml" %cid
     comment_page_zip=urllib.request.urlopen(comment_url).read()
     comment=zlib.decompressobj(-zlib.MAX_WBITS).decompress(comment_page_zip)
     if os.path.exists('%s' % animeName)==False:
