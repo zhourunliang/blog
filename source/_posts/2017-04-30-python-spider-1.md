@@ -144,8 +144,12 @@ def downloadDanmu(cidItem):
     fout.close()
     print('%s %s下载完成' % (animeName,pagename))
 
-# aid=input('请输入aid：')
-# getPageList(aid)
-keyword=input('请输入番剧的关键字：')
-geAidByKeyword(keyword)
+def main():
+    # aid=input('请输入aid：')
+    # getPageList(aid)
+    keyword=input('请输入番剧的关键字：')
+    geAidByKeyword(keyword)
+
+if __name__ == '__main__':
+    main()
 ```
