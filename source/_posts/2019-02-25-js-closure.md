@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "JavaScript中闭包"
+title:  "JavaScript中的闭包"
 date:   2019-02-25
 tags: JavaScript
 ---
 
-# JavaScript中闭包
+# JavaScript中的闭包
 各种专业文献上的"闭包"（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。
 由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成"定义在一个函数内部的函数"。
 所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。
@@ -29,7 +29,7 @@ tags: JavaScript
     })()
 
     console.log('闭包 get', a.get())
-    a.set('gw')
+    a.set('2')
     console.log('闭包 get', a.get())
 ```
 
