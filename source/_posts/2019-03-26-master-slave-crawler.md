@@ -25,7 +25,7 @@ pip install redis
 
 ## 代码
 
-### 主函数(main.py)
+### 主函数(master.py)
 ```python
 import os
 import requests
