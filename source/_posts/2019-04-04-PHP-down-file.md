@@ -6,6 +6,7 @@ tags: PHP
 ---
 
 # 代码
+基于thinkphp5.0框架
 ```php
 public function downItem($id)
 {
