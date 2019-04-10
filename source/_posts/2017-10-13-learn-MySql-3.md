@@ -213,6 +213,18 @@ ORDER BY code DESC
 
  ```
 
+ ## 统计学生选课数与科目
+ ```sql
+SELECT
+    s.`name` as name,
+    count(r.`id`) as num,
+    GROUP_CONCAT(su.`name` SEPARATOR ",") as subject_name
+FROM student as s
+LEFT JOIN student_subject_relation as r on r.student_id=s.id
+LEFT JOIN `subject` as su on su.id=r.subject_id
+GROUP BY s.id
+ ```
+
 ## thinkphp的Model数据库配置
 ```php
 protected $connection = 'mysql://username:password@host:port/db';
