@@ -14,7 +14,7 @@ tags: MySql
 - 编写过程：
         ```sql
 			select dinstinct  ..from  ..join ..on ..where ..group by ...having ..order by ..limit ..
-            ```
+        ```
 
 
 - 解析过程：
@@ -210,6 +210,7 @@ mysql的最大连接数默认是100, 最大可以达到16384，可以通过max_c
 | 表空间大小     | 相对小              | 相对大              |
 | 全文索引       | 支持                | 不支持              |
 | 关注点         | 性能（select）      | 事务                |
+| MVCC           | 不支持              | 支持                |
  
 
 
